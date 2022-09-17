@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Your description goes here">
+	<meta name="keywords" content="one, two, three">
+	<title>PokéDrafts</title>
+
+	<!-- external CSS link -->
+	<link href="http://fonts.cdnfonts.com/css/nintendo-ds-bios" rel="stylesheet">
+	<link rel="stylesheet" href="/css/normalize.css">
+	<link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+	<div id="app-container">
+		<div id="title-container">
+			<h1>
+				<!-- <img src="https://fontmeme.com/permalink/220913/6616344a537ac211b127d78d504e7ac9.png" alt="trim-images" border="0"> -->
+			</h1>
+			<h2>A Deck Builder App for the Pokémon Trading Card Game</h2>
+			<h3>Welcome !</h3>
+		</div>
+		<section id="nav-container">
+			<a class="tab-button" href="/auth/logout">Logout</a>
+			<a class="tab-button" href="/search">Search Cards</a>
+			<a class="tab-button" href="/deck">Deck</a>
+		</section>
+		<main>
+            <%- body %>
+        </main>
+	</div>
+
+	<script src="/main.js"></script>
+</body>
+
+</html>

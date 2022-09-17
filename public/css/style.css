@@ -87,6 +87,7 @@ h3 {
 #nav-container {
      display: flex;
      flex-direction: row;
+     width: 100%;
      position: relative;
      overflow: hidden;
      width: 100%;
@@ -104,14 +105,14 @@ h3 {
 }
 
 #logout-button {
-     width: 30%;
+     flex: 1 1 0;
      font-size: 20px;
      font-weight: bold;
      border: 1px solid black;
 }
 
 #nav-container .tab-button {
-     width: 25%;
+     flex: 1 1 0;
      font-size: 20px;
      font-weight: bold;
      border: 1px solid black;
@@ -282,7 +283,6 @@ img:active {
 /* TAB VIEW */
 
 .tab-content {
-     display: none;
      padding: 6px 12px;
      border-top: none;
 }

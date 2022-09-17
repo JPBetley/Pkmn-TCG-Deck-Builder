@@ -1,0 +1,55 @@
+<div id="search-param" class="panel tab-content">
+    <form action="/search/results" method="POST">
+        <section class="name-input">
+            <h2 id="search-header">Search Cards</h2>
+            <input type="text" name="name" placeholder="Search by name...">
+        </section>
+        <div id="choice-params">
+            <section class="supertype-input-sec search-input">
+                <div class="supertype-input-div">
+                    <h3>Card Type</h3>
+                    <input class="type-input" type="checkbox" id="card-type-pokemon" name="supertype" value="Pokémon">
+                    <label for="supertype-pokemon"> Pokémon</label>
+                    <input class="type-input" type="checkbox" id="card-type-trainer" name="supertype" value="Trainer">
+                    <label for="supertype-trainer"> Trainer</label>
+                    <input class="type-input" type="checkbox" id="card-type-energy" name="supertype" value="Energy">
+                    <label for="supertype-energy"> Energy</label>
+                </div>
+            </section>
+            <section class="type-input-sec search-input">
+                <h3>Type</h3>
+                <div class="type-input-div">
+                    <input class="type-input" type="checkbox" id="type-colorless" name="type" value="Colorless">
+                    <label for="typecolorless"> Colorless</label>
+                    <input class="type-input" type="checkbox" id="type-psychic" name="type" value="Psychic">
+                    <label for="typepsychic"> Psychic</label>
+                    <input class="type-input" type="checkbox" id="type-water" name="type" value="Water">
+                    <label for="typewater"> Water</label>
+                </div>
+                <div class="type-input-div">
+                    <input class="type-input" type="checkbox" id="type-fire" name="type" value="Fire">
+                    <label for="typefire"> Fire</label>
+                    <input class="type-input" type="checkbox" id="type-grass" name="type" value="Grass">
+                    <label for="typegrass"> Grass</label>
+                    <input class="type-input" type="checkbox" id="type-lightning" name="type" value="Lightning">
+                    <label for="typelightning"> Lightning</label>
+                    <input class="type-input" type="checkbox" id="type-fighting" name="type" value="Fighting">
+                    <label for="typefighting"> Fighting</label>
+                </div>
+            </section>
+            <section class="set-input-sec search-input">
+                <div class="set-input-div">
+                    <h3>Set</h3>
+                    <input class="type-input" type="checkbox" id="base" name="set" value="base1" checked>
+                    <label for="set-base"> Base</label>
+                    <input class="type-input" type="checkbox" id="jungle" name="set" value="base2">
+                    <label for="set-jungle"> Jungle</label>
+                    <input class="type-input" type="checkbox" id="fossil" name="set" value="base3">
+                    <label for="set-fossil"> Fossil</label>
+                </div>
+            </section>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+</div>

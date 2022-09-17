@@ -1,0 +1,18 @@
+<div id="search-results" class="panel tab-content">
+    <h2>Search Results</h2>
+    <div id="card-container">
+        <% if (cards.length == 0) { %>
+            <h3>No results!</h3>
+        <% } else { %>
+            <ul class="search-cards search-slider slider">
+                <% for(var i = 0; i < cards.length; i++) {%>
+                    <li class="search-card search-slide slide" style="transform: translateX(<%= i * 100 %>%)">
+                        <img class="card-img" src="<%= cards[i].images.small %>">
+                    </li>
+                <% } %>
+            </ul>
+            <button class="btn search-btn-next">&gt;</button>
+            <button class="btn search-btn-prev">&lt;</button>
+        <% } %>
+    </div>
+</div>

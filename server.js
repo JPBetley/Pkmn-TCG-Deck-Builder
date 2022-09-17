@@ -16,6 +16,8 @@ const cors = require ('cors');
 const mainRoutes = require('./routes/main')
 const authRoutes = require('./routes/auth')
 const decksRoutes = require('./routes/decks')
+const searchRoutes = require('./routes/search')
+var expressLayouts = require('express-ejs-layouts');
 
 // Load Config
 dotenv.config({ path: './config/config.env' })
@@ -57,14 +59,15 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 // Initiate HTML templating engine - ejs
+app.set('layout', './layouts/app')
 app.set('view engine', 'ejs')
+app.use(expressLayouts)
 
 // Sessions
 app.use(session({
     secret: 'keyboard cat',
     resave: false,
     saveUninitialized: false,
-    // store: new MongoStore({ mongoUrl: process.env.MONGO_URI })
     store: new MongoStore({ mongooseConnection: mongoose.connection })
 }))
 
@@ -85,6 +88,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use('/', mainRoutes)
 app.use('/auth', authRoutes)
 app.use('/decks', decksRoutes)
+app.use('/search', searchRoutes)
 
 
 
